@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    image: deck-of-cards-app
+    container_name: deck-of-cards-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+    stdin_open: true
+    tty: true
+  npm:
+    image: node:18.17.0-alpine
+    container_name: deck-of-cards-npm
+    working_dir: /home/node/app
+    volumes:
+      - .:/home/node/app
+    entrypoint: ['npm']

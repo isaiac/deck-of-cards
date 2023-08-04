@@ -1,0 +1,19 @@
+.draw-card-button {
+  margin: 30px auto;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #ccc;
+  color: black;
+  display: block;
+  cursor: pointer;
+}
+
+.draw-card-button:disabled {
+  opacity: 0.4;
+}
+
+.deck-container {
+  top: 200px !important;
+}
